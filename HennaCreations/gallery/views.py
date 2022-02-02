@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic import TemplateView
 
 
-def GalleryView(request):
-    return HttpResponse("Hello, World!")
+class GalleryView(TemplateView):
+    template_name = "gallery_home.html"
